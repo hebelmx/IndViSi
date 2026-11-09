@@ -1,0 +1,30 @@
+@inject Siara.Simulator.Services.AuthenticationService AuthService
+@inject NavigationManager NavManager
+
+<Router AppAssembly="typeof(Program).Assembly">
+    <Found Context="routeData">
+        @{
+            var isLoginPage = routeData.PageType == typeof(Components.Pages.Login);
+        }
+        @if (AuthService.IsAuthenticated || isLoginPage)
+        {
+            <RouteView RouteData="routeData" DefaultLayout="typeof(Components.Layout.MainLayout)" />
+            <FocusOnNavigate RouteData="routeData" Selector="h1" />
+        }
+        else
+        {
+            <NavigateToLogin />
+        }
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="typeof(Components.Layout.MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
+
+@code {
+    // Routes component handles authentication-based navigation.
+    // Unauthenticated users are redirected to /login via NavigateToLogin component.
+}

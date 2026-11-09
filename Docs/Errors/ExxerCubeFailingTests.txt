@@ -1,0 +1,297 @@
+  ExxerCube.Prisma.Tests.Infrastructure (9 tests) [0:19.964] Failed: 9 tests failed
+   Classification (1 test) [0:01.795] Failed: 1 test failed
+    PersonIdentityResolverServiceTests (1 test) [0:01.795] Failed: One or more child tests failed: 1 test failed
+     FindByRfcAsync_WithValidRfc_ReturnsNull [0:01.483] Failed: Shouldly.ShouldAssertException: result.IsSuccess
+Shouldly.ShouldAssertException
+result.IsSuccess
+    should be
+True
+    but was
+False
+   at ExxerCube.Prisma.Tests.Infrastructure.Classification.PersonIdentityResolverServiceTests.FindByRfcAsync_WithValidRfc_ReturnsNull() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure.Classification\PersonIdentityResolverServiceTests.cs:line 185
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+
+   Database (2 tests) [0:11.986] Failed: 2 tests failed
+    SLAEnforcerServiceTests (2 tests) [0:06.046] Failed: One or more child tests failed: 2 tests failed
+     CalculateSLAStatusAsync_NewStatus_CreatesSLAStatus [0:00.026] Failed: Shouldly.ShouldAssertException: result.Value.RemainingTime
+Shouldly.ShouldAssertException
+result.Value.RemainingTime
+    should be greater than
+00:00:00
+    but was
+00:00:00
+   at ExxerCube.Prisma.Tests.Infrastructure.Database.SLAEnforcerServiceTests.CalculateSLAStatusAsync_NewStatus_CreatesSLAStatus() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure\Database\SLAEnforcerServiceTests.cs:line 59
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+SLA Metrics Collector initialized
+Calculating SLA status for file: test-file-001, intake date: 01/15/2025 10:00:00, days plazo: 5
+SLA status calculated for file: test-file-001, deadline: 01/22/2025 10:00:00, escalation: Breached
+
+     GetSLAStatusAsync_NonExistentStatus_ReturnsNull [0:00.082] Failed: Shouldly.ShouldAssertException: result.IsSuccess
+Shouldly.ShouldAssertException
+result.IsSuccess
+    should be
+True
+    but was
+False
+   at ExxerCube.Prisma.Tests.Infrastructure.Database.SLAEnforcerServiceTests.GetSLAStatusAsync_NonExistentStatus_ReturnsNull() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure\Database\SLAEnforcerServiceTests.cs:line 353
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+SLA Metrics Collector initialized
+
+   Export (4 tests) [0:04.551] Failed: 4 tests failed
+    ExportIntegrationTests (1 test) [0:01.515] Failed: One or more child tests failed: 1 test failed
+     PdfRequirementSummarizerService_UsesOcrExtraction_DoesNotBreakPipeline [0:01.491] Failed: Shouldly.ShouldAssertException: result.IsSuccess
+Shouldly.ShouldAssertException
+result.IsSuccess
+    should be
+True
+    but was
+False
+   at ExxerCube.Prisma.Tests.Infrastructure.Export.ExportIntegrationTests.PdfRequirementSummarizerService_UsesOcrExtraction_DoesNotBreakPipeline() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure.Export\ExportIntegrationTests.cs:line 90
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+Starting PDF requirement summarization
+Failed to extract text directly from PDF, will use metadata extractor
+System.ArgumentOutOfRangeException: value ('-23') must be a non-negative value. (Parameter 'value')
+Actual value was -23.
+   at System.ArgumentOutOfRangeException.ThrowNegative[T](T value, String paramName)
+   at System.IO.MemoryStream.set_Position(Int64 value)
+   at PdfSharp.Pdf.IO.Lexer.ScanRawString(Int64 position, Int32 length)
+   at PdfSharp.Pdf.IO.Parser.ReadTrailer()
+   at PdfSharp.Pdf.IO.PdfReader.OpenFromStream(Stream stream, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, PdfDocumentOpenMode openMode, PdfReaderOptions options)
+   at ExxerCube.Prisma.Infrastructure.Export.PdfRequirementSummarizerService.ExtractTextFromPdfAsync(Byte[] pdfContent, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure.Export\PdfRequirementSummarizerService.cs:line 198
+
+    PdfExportPerformanceTests (2 tests) [0:01.514] Failed: One or more child tests failed: 2 tests failed
+     SummarizeRequirementsAsync_CompletesWithin10Seconds_NFR10 [0:01.491] Failed: Shouldly.ShouldAssertException: result.IsSuccess
+Shouldly.ShouldAssertException
+result.IsSuccess
+    should be
+True
+    but was
+False
+   at ExxerCube.Prisma.Tests.Infrastructure.Export.PdfExportPerformanceTests.SummarizeRequirementsAsync_CompletesWithin10Seconds_NFR10() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure.Export\PdfExportPerformanceTests.cs:line 140
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+Starting PDF requirement summarization
+Failed to extract text directly from PDF, will use metadata extractor
+PdfSharp.Pdf.IO.PdfReaderException: Unexpected token 'obj' in PDF stream. The file may be corrupted. If you think this is a bug in PDFsharp, please visit https://docs.pdfsharp.net/link/cannot-open-pdf-6.2.html for further information.
+s·4·0·R〈LF〉>>〈LF〉endobj〈LF〉4·0·obj‼〈LF〉<<〈LF〉/Length·44〈LF〉>>〈LF〉stream〈LF〉
+Position marked with ‼ is 209
+   at PdfSharp.Internal.ParserDiagnostics.ThrowParserException(String message)
+   at PdfSharp.Internal.ParserDiagnostics.HandleUnexpectedToken(String token, String dump)
+   at PdfSharp.Pdf.IO.Parser.ReadInteger()
+   at PdfSharp.Pdf.IO.Parser.CheckXRefTableEntry(Int64 position, Int32 id, Int32 generation, Int32& idChecked, Int32& generationChecked)
+   at PdfSharp.Pdf.IO.Parser.ReadXRefTableAndTrailer(PdfCrossReferenceTable xrefTable)
+   at PdfSharp.Pdf.IO.Parser.ReadTrailer()
+   at PdfSharp.Pdf.IO.PdfReader.OpenFromStream(Stream stream, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, PdfDocumentOpenMode openMode, PdfReaderOptions options)
+   at ExxerCube.Prisma.Infrastructure.Export.PdfRequirementSummarizerService.ExtractTextFromPdfAsync(Byte[] pdfContent, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure.Export\PdfRequirementSummarizerService.cs:line 198
+Error summarizing PDF requirements
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ExxerCube.Prisma.Infrastructure.Export.PdfRequirementSummarizerService.ExtractTextFromPdfAsync(Byte[] pdfContent, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure.Export\PdfRequirementSummarizerService.cs:line 261
+   at ExxerCube.Prisma.Infrastructure.Export.PdfRequirementSummarizerService.SummarizeRequirementsAsync(Byte[] pdfContent, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure.Export\PdfRequirementSummarizerService.cs:line 61
+
+     SummarizeRequirementsAsync_LargePdf_HandlesEfficiently [0:00.009] Failed: Shouldly.ShouldAssertException: result.IsSuccess
+Shouldly.ShouldAssertException
+result.IsSuccess
+    should be
+True
+    but was
+False
+   at ExxerCube.Prisma.Tests.Infrastructure.Export.PdfExportPerformanceTests.SummarizeRequirementsAsync_LargePdf_HandlesEfficiently() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure.Export\PdfExportPerformanceTests.cs:line 231
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+Starting PDF requirement summarization
+Failed to extract text directly from PDF, will use metadata extractor
+PdfSharp.Pdf.IO.PdfReaderException: Unexpected token 'obj' in PDF stream. The file may be corrupted. If you think this is a bug in PDFsharp, please visit https://docs.pdfsharp.net/link/cannot-open-pdf-6.2.html for further information.
+s·4·0·R〈LF〉>>〈LF〉endobj〈LF〉4·0·obj‼〈LF〉<<〈LF〉/Length·44〈LF〉>>〈LF〉stream〈LF〉
+Position marked with ‼ is 209
+   at PdfSharp.Internal.ParserDiagnostics.ThrowParserException(String message)
+   at PdfSharp.Internal.ParserDiagnostics.HandleUnexpectedToken(String token, String dump)
+   at PdfSharp.Pdf.IO.Parser.ReadInteger()
+   at PdfSharp.Pdf.IO.Parser.CheckXRefTableEntry(Int64 position, Int32 id, Int32 generation, Int32& idChecked, Int32& generationChecked)
+   at PdfSharp.Pdf.IO.Parser.ReadXRefTableAndTrailer(PdfCrossReferenceTable xrefTable)
+   at PdfSharp.Pdf.IO.Parser.ReadTrailer()
+   at PdfSharp.Pdf.IO.PdfReader.OpenFromStream(Stream stream, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, PdfDocumentOpenMode openMode, PdfReaderOptions options)
+   at ExxerCube.Prisma.Infrastructure.Export.PdfRequirementSummarizerService.ExtractTextFromPdfAsync(Byte[] pdfContent, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure.Export\PdfRequirementSummarizerService.cs:line 198
+Error summarizing PDF requirements
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ExxerCube.Prisma.Infrastructure.Export.PdfRequirementSummarizerService.ExtractTextFromPdfAsync(Byte[] pdfContent, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure.Export\PdfRequirementSummarizerService.cs:line 261
+   at ExxerCube.Prisma.Infrastructure.Export.PdfRequirementSummarizerService.SummarizeRequirementsAsync(Byte[] pdfContent, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure.Export\PdfRequirementSummarizerService.cs:line 61
+
+    PdfRequirementSummarizerServiceTests (1 test) [0:01.521] Failed: One or more child tests failed: 1 test failed
+     SummarizeRequirementsFromTextAsync_DesbloqueoRequirements_CategorizesCorrectly [0:01.490] Failed: Shouldly.ShouldAssertException: result.Value.Desbloqueo
+Shouldly.ShouldAssertException
+result.Value.Desbloqueo
+    should not be empty but was
+   at ExxerCube.Prisma.Tests.Infrastructure.Export.PdfRequirementSummarizerServiceTests.SummarizeRequirementsFromTextAsync_DesbloqueoRequirements_CategorizesCorrectly() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure.Export\PdfRequirementSummarizerServiceTests.cs:line 138
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+Summarizing requirements from PDF text (length: 226)
+Successfully summarized 5 requirements into 5 bloqueo, 0 desbloqueo, 0 documentacion, 0 transferencia, 0 informacion
+
+   FileSystem (2 tests) [0:01.631] Failed: 2 tests failed
+    FileSystemLoaderTests (2 tests) [0:01.631] Failed: One or more child tests failed: 2 tests failed
+     LoadImageAsync_ValidImageFile_ReturnsSuccessResult [0:00.125] Failed: Shouldly.ShouldAssertException: result.IsSuccess
+Shouldly.ShouldAssertException
+result.IsSuccess
+    should be
+True
+    but was
+False
+   at ExxerCube.Prisma.Tests.Infrastructure.FileSystem.FileSystemLoaderTests.LoadImageAsync_ValidImageFile_ReturnsSuccessResult() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure\FileSystem\FileSystemLoaderTests.cs:line 43
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+Loading image from file C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4e5e9e7d-3df2-43b9-b66e-3dd6591a8254\test.png
+Error loading image from file C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4e5e9e7d-3df2-43b9-b66e-3dd6591a8254\test.png
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at Windows.Win32.Graphics.GdiPlus.StatusExtensions.ThrowIfFailed(Status status)
+   at System.Drawing.CoreImageExtensions.Save(IImage image, Stream stream, Guid encoder, Guid format, EncoderParameters* encoderParameters)
+   at System.Drawing.Image.Save(Stream stream, ImageFormat format)
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.LoadImageFile(String filePath) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 332
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.<>c__DisplayClass3_0.<LoadImageAsync>b__1() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 97
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.LoadImageAsync(String filePath, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 97
+
+     LoadImagesFromDirectoryAsync_MultipleImages_ReturnsSuccessfulResults [0:01.496] Failed: Shouldly.ShouldAssertException: result.Value!.Count
+Shouldly.ShouldAssertException
+result.Value!.Count
+    should be greater than or equal to
+2
+    but was
+0
+   at ExxerCube.Prisma.Tests.Infrastructure.FileSystem.FileSystemLoaderTests.LoadImagesFromDirectoryAsync_MultipleImages_ReturnsSuccessfulResults() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure\FileSystem\FileSystemLoaderTests.cs:line 142
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+Loading images from directory C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4114f8e6-d2e1-4451-a5c9-c62a181d2051
+Loading image from file C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4114f8e6-d2e1-4451-a5c9-c62a181d2051\image1.png
+Error loading image from file C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4114f8e6-d2e1-4451-a5c9-c62a181d2051\image1.png
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at Windows.Win32.Graphics.GdiPlus.StatusExtensions.ThrowIfFailed(Status status)
+   at System.Drawing.CoreImageExtensions.Save(IImage image, Stream stream, Guid encoder, Guid format, EncoderParameters* encoderParameters)
+   at System.Drawing.Image.Save(Stream stream, ImageFormat format)
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.LoadImageFile(String filePath) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 332
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.<>c__DisplayClass3_0.<LoadImageAsync>b__1() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 97
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.LoadImageAsync(String filePath, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 97
+Loading image from file C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4114f8e6-d2e1-4451-a5c9-c62a181d2051\image2.jpg
+Error loading image from file C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4114f8e6-d2e1-4451-a5c9-c62a181d2051\image2.jpg
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at Windows.Win32.Graphics.GdiPlus.StatusExtensions.ThrowIfFailed(Status status)
+   at System.Drawing.CoreImageExtensions.Save(IImage image, Stream stream, Guid encoder, Guid format, EncoderParameters* encoderParameters)
+   at System.Drawing.Image.Save(Stream stream, ImageFormat format)
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.LoadImageFile(String filePath) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 332
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.<>c__DisplayClass3_0.<LoadImageAsync>b__1() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 97
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.LoadImageAsync(String filePath, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 97
+Loading image from file C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4114f8e6-d2e1-4451-a5c9-c62a181d2051\test.png
+Error loading image from file C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4114f8e6-d2e1-4451-a5c9-c62a181d2051\test.png
+System.Runtime.InteropServices.ExternalException (0x80004005): A generic error occurred in GDI+.
+   at Windows.Win32.Graphics.GdiPlus.StatusExtensions.ThrowIfFailed(Status status)
+   at System.Drawing.CoreImageExtensions.Save(IImage image, Stream stream, Guid encoder, Guid format, EncoderParameters* encoderParameters)
+   at System.Drawing.Image.Save(Stream stream, ImageFormat format)
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.LoadImageFile(String filePath) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 332
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.<>c__DisplayClass3_0.<LoadImageAsync>b__1() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 97
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at ExxerCube.Prisma.Infrastructure.FileSystem.FileSystemLoader.LoadImageAsync(String filePath, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure\FileSystem\FileSystemLoader.cs:line 97
+Some files failed to load: 3 errors
+Successfully loaded 0 images from directory C:\Users\dev\AppData\Local\Temp\FileSystemLoaderTests_4114f8e6-d2e1-4451-a5c9-c62a181d2051

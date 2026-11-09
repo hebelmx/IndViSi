@@ -1,0 +1,70 @@
+     FindByRfcAsync_WithValidRfc_ReturnsNull [0:00.935] Failed: Shouldly.ShouldAssertException: result.IsSuccess
+Shouldly.ShouldAssertException
+result.IsSuccess
+    should be
+True
+    but was
+False
+   at ExxerCube.Prisma.Tests.Infrastructure.Classification.PersonIdentityResolverServiceTests.FindByRfcAsync_WithValidRfc_ReturnsNull() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure.Classification\PersonIdentityResolverServiceTests.cs:line 185
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+
+     GetSLAStatusAsync_NonExistentStatus_ReturnsNull [0:01.834] Failed: Shouldly.ShouldAssertException: result.IsSuccess
+Shouldly.ShouldAssertException
+result.IsSuccess
+    should be
+True
+    but was
+False
+   at ExxerCube.Prisma.Tests.Infrastructure.Database.SLAEnforcerServiceTests.GetSLAStatusAsync_NonExistentStatus_ReturnsNull() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure\Database\SLAEnforcerServiceTests.cs:line 354
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+SLA Metrics Collector initialized
+
+     PdfRequirementSummarizerService_UsesOcrExtraction_DoesNotBreakPipeline [0:00.935] Failed: Shouldly.ShouldAssertException: result.IsSuccess
+Shouldly.ShouldAssertException
+result.IsSuccess
+    should be
+True
+    but was
+False
+   at ExxerCube.Prisma.Tests.Infrastructure.Export.ExportIntegrationTests.PdfRequirementSummarizerService_UsesOcrExtraction_DoesNotBreakPipeline() in C:\src\IndViSi\Prisma\Code\Src\CSharp\Tests\Infrastructure.Export\ExportIntegrationTests.cs:line 90
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.TestRunner`2.<>c__DisplayClass5_0.<<InvokeTest>b__1>d.MoveNext() in /_/src/xunit.v3.core/Runners/TestRunner.cs:line 177
+--- End of stack trace from previous location ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
+   at Xunit.v3.ExceptionAggregator.RunAsync(Func`1 code) in /_/src/xunit.v3.core/Exceptions/ExceptionAggregator.cs:line 124
+
+Starting PDF requirement summarization
+Failed to extract text directly from PDF, will use metadata extractor
+System.ArgumentOutOfRangeException: value ('-23') must be a non-negative value. (Parameter 'value')
+Actual value was -23.
+   at System.ArgumentOutOfRangeException.ThrowNegative[T](T value, String paramName)
+   at System.IO.MemoryStream.set_Position(Int64 value)
+   at PdfSharp.Pdf.IO.Lexer.ScanRawString(Int64 position, Int32 length)
+   at PdfSharp.Pdf.IO.Parser.ReadTrailer()
+   at PdfSharp.Pdf.IO.PdfReader.OpenFromStream(Stream stream, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, String password, PdfDocumentOpenMode openMode, PdfPasswordProvider passwordProvider, PdfReaderOptions options)
+   at PdfSharp.Pdf.IO.PdfReader.Open(Stream stream, PdfDocumentOpenMode openMode, PdfReaderOptions options)
+   at ExxerCube.Prisma.Infrastructure.Export.PdfRequirementSummarizerService.ExtractTextFromPdfAsync(Byte[] pdfContent, CancellationToken cancellationToken) in C:\src\IndViSi\Prisma\Code\Src\CSharp\Infrastructure.Export\PdfRequirementSummarizerService.cs:line 198
+Failed to extract text from PDF: No text could be extracted from PDF and metadata extractor returned no fields
